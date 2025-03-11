@@ -15,7 +15,7 @@ app.post("/send-to-botghost", async (req, res) => {
                 "Content-Type": "application/json",
                 "Authorization": process.env.BOTGHOST_AUTH
             },
-            body: JSON.stringify(req.body)
+            body: JSON.stringify(payload)
         });
 
         const data = await response.json();
